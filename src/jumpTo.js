@@ -6,16 +6,23 @@
 	} else if (typeof exports === 'object') {
 			module.exports = factory;
 	} else {
-			window.JumpTo = factory;
+			window.jumpTo = factory;
 	}
 
-})(function() {
+})(function(settings) {
 
-	var windowHeight = window.innerHeight;
+	var defaults = {
+		height: window.innerHeight,
+		offset: 0
+	};
+
+	settings = $.extend(true, {}, defaults, settings);
+
 	var pageYOffset = window.pageYOffset;
-	var hasScrolled = pageYOffset > windowHeight;
+	var hasScrolled = pageYOffset > settings.offset + settings.height;
 	var isScrolling = false;
 	var eventsBinded = false;
+	var isActive = true;
 
 	var raf = (function(){ return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ) { window.setTimeout(callback, 1000 / 60); }; })();
 
@@ -71,7 +78,7 @@
 			isScrolling = true;
 			TweenLite.to(window, 1, {
 				scrollTo: {
-					y: windowHeight,
+					y: settings.height + settings.offset,
 					onAutoKill: unbindEvents
 				},
 				ease: Expo.easeInOut,
@@ -87,9 +94,21 @@
 	 */
 	(function loop() {
 		console.log('loop');
+		if (!isActive) return;
 		pageYOffset = window.pageYOffset;
 		if (pageYOffset === 0 && hasScrolled) hasScrolled = false;
-		if (pageYOffset < windowHeight && !hasScrolled && !isScrolling && !eventsBinded) bindEvents();
+		if (pageYOffset < settings.height + settings.offset && !hasScrolled && !isScrolling && !eventsBinded) bindEvents();
 		raf(loop);
 	})();
+
+
+
+	return {
+		setSizes: function(sizes) {
+			settings = $.extend(true, {}, settings, sizes);
+		},
+		kill: function() {
+			isActive = false;
+		}
+	}
 });

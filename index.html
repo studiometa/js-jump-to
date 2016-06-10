@@ -158,7 +158,19 @@
 			window.addEventListener('load', function() {
 				if (navigator.platform === 'MacIntel' || navigator.platform === 'MacPPC') $('html').addClass('is-mac');
 
-				JumpTo();
+				var jump = jumpTo({
+					height: window.innerHeight
+				});
+
+				var timer;
+				$(window).on('resize', function() {
+					clearTimeout(timer);
+					timer = setTimeout(function() {
+						jump.setSizes({
+							height: window.innerHeight
+						})
+					}, 100)
+				});
 
 			});
 		</script>

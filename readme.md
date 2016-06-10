@@ -1,4 +1,4 @@
-A small script to jump to content.
+A small script to jump to content, check out the [demo](http://studiometa.github.io/js-jump-to/).
 
 ## Use
 

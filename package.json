@@ -1,0 +1,22 @@
+{
+  "name": "js-jump-to",
+  "version": "1.0.0",
+  "description": "Jump to content",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/studiometa/js-loader.git"
+  },
+  "author": "Studio Meta",
+  "license": "MIT"
+}

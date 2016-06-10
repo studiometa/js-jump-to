@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>JS — Jump To</title>
+		<meta name="author" content="Studio Meta">
+		<meta name="copyright" content="© Studio Meta">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+
+		<link rel="shortcut icon" type="image/png" href="./icon.png">
+
+		<style type="text/css">
+			*, *:after, *:before { box-sizing: border-box; }
+
+			body {
+				margin: 0;
+				font: 1em/1.45 Arial, sans-serif;
+				color: #222;
+			}
+
+			.is-mac {
+				-webkit-font-smoothing: antialiased;
+				-moz-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				-moz-osx-font-smoothing: antialiased;
+			}
+
+			main {
+				padding: 1px;
+				color: #fff;
+				background: #111;
+			}
+
+			article {
+				width: 100%;
+				max-width: 42em;
+				margin: 0 auto 4em;
+				padding: 1em;
+			}
+
+			p, figure { margin: 2.3em auto; }
+
+			a:not([class]) {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1px solid;
+			}
+
+			h1, h2, h3, h4 {
+				margin: 2.414em 0 1.5em;
+				line-height: 1.2;
+				text-align: center;
+			}
+
+			h1 {
+				margin-top: 0;
+				margin-bottom: 0;
+				line-height: 1;
+				font-size: 3.157em;
+			}
+
+			h2 { font-size: 2.369em; }
+			h3 { font-size: 1.777em; }
+			h4 { font-size: 1.333em; }
+
+			small { font-size: 0.75em; }
+
+			button {
+				display: inline-block;
+				margin: 0 0.5em;
+				padding: 0.5em 1em;
+				font: inherit;
+				font-weight: 700;
+				color: inherit;
+				-webkit-appearance: none;
+				background: none;
+				border: 3px solid;
+				cursor: pointer;
+				transition: background 0.2s ease-out;
+			}
+
+			button:hover { color: #111; }
+			button:focus { outline: 2px solid -webkit-focus-ring-color;}
+			button:active { transform: translate(0, 1px); }
+
+			.studiometa {
+				display: inline-block;
+				padding: 0.5em;
+			}
+
+			.studiometa span { display: block; }
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+
+			header {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				-webkit-flex-direction: column;
+				-moz-flex-direction: column;
+				-ms-flex-direction: column;
+				-o-flex-direction: column;
+				flex-direction: column;
+				height: 100vh;
+			}
+
+
+			section {
+				background: #000;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<header>
+			<h1>JS — Jump To</h1>
+			<p>
+				<button id="js-jump-to--btn">Go to content</button>
+			</p>
+		</header>
+
+		<main>
+			<article>
+				<h2>Content</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nesciunt non temporibus dolorem aliquid doloribus perferendis, corporis laborum possimus quibusdam quas ratione nobis facilis atque commodi, consequuntur distinctio qui omnis.</p>
+				<p>Nunc bibendum, ex id placerat porta, diam massa aliquet est, viverra dignissim lacus nibh nec purus. Mauris non lacus porta, consectetur nisi sit amet, egestas risus. Phasellus ornare enim sed commodo lobortis. Vivamus ex magna, imperdiet nec tortor eget, fermentum faucibus orci. Vivamus non aliquam elit, eget pharetra ligula. Duis convallis turpis at diam molestie accumsan. Vestibulum nibh nulla, dictum at lacinia nec, venenatis quis ligula. Pellentesque rutrum auctor mauris in pulvinar. Morbi molestie tortor sit amet erat tincidunt efficitur. Cras euismod porta tortor, et luctus quam rutrum vel.</p>
+				<p>Sed auctor rhoncus varius. Donec vel lorem diam. Nullam maximus quam nisi, a porttitor ligula malesuada vitae. In semper vel elit a feugiat. Vestibulum at dolor interdum, vehicula dolor ac, convallis velit. Donec mattis sed metus faucibus finibus. Mauris nisl ex, condimentum et aliquet vitae, ornare ac ipsum. Aliquam pharetra interdum magna, non elementum mauris tempor vitae. Aliquam congue at arcu mollis volutpat. Ut ullamcorper mi a metus faucibus, id fringilla dui euismod. Ut tincidunt velit sed cursus tincidunt. Pellentesque vitae vestibulum augue. Donec ultrices commodo velit eu ullamcorper.</p>
+				<p>Vivamus imperdiet congue consequat. Quisque vulputate, urna ac pharetra suscipit, tellus quam bibendum leo, vel consequat metus nunc at elit. Donec consectetur pulvinar sapien ut eleifend. Vestibulum mattis ut dui maximus auctor. Nulla eu tincidunt neque. Ut nec sollicitudin nisl. Maecenas eu tincidunt dolor. Nulla magna tortor, rutrum sit amet dolor eu, eleifend accumsan tellus. Nulla tempor commodo fermentum.</p>
+				<h2>More content</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nesciunt non temporibus dolorem aliquid doloribus perferendis, corporis laborum possimus quibusdam quas ratione nobis facilis atque commodi, consequuntur distinctio qui omnis.</p>
+				<p>Nunc bibendum, ex id placerat porta, diam massa aliquet est, viverra dignissim lacus nibh nec purus. Mauris non lacus porta, consectetur nisi sit amet, egestas risus. Phasellus ornare enim sed commodo lobortis. Vivamus ex magna, imperdiet nec tortor eget, fermentum faucibus orci. Vivamus non aliquam elit, eget pharetra ligula. Duis convallis turpis at diam molestie accumsan. Vestibulum nibh nulla, dictum at lacinia nec, venenatis quis ligula. Pellentesque rutrum auctor mauris in pulvinar. Morbi molestie tortor sit amet erat tincidunt efficitur. Cras euismod porta tortor, et luctus quam rutrum vel.</p>
+				<p>Sed auctor rhoncus varius. Donec vel lorem diam. Nullam maximus quam nisi, a porttitor ligula malesuada vitae. In semper vel elit a feugiat. Vestibulum at dolor interdum, vehicula dolor ac, convallis velit. Donec mattis sed metus faucibus finibus. Mauris nisl ex, condimentum et aliquet vitae, ornare ac ipsum. Aliquam pharetra interdum magna, non elementum mauris tempor vitae. Aliquam congue at arcu mollis volutpat. Ut ullamcorper mi a metus faucibus, id fringilla dui euismod. Ut tincidunt velit sed cursus tincidunt. Pellentesque vitae vestibulum augue. Donec ultrices commodo velit eu ullamcorper.</p>
+				<p>Vivamus imperdiet congue consequat. Quisque vulputate, urna ac pharetra suscipit, tellus quam bibendum leo, vel consequat metus nunc at elit. Donec consectetur pulvinar sapien ut eleifend. Vestibulum mattis ut dui maximus auctor. Nulla eu tincidunt neque. Ut nec sollicitudin nisl. Maecenas eu tincidunt dolor. Nulla magna tortor, rutrum sit amet dolor eu, eleifend accumsan tellus. Nulla tempor commodo fermentum.</p>
+			</article>
+		</main>
+
+		<script defer src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js"></script>
+		<script defer src="./src/jumpTo.js"></script>
+		<script defer>
+			window.addEventListener('load', function() {
+				if (navigator.platform === 'MacIntel' || navigator.platform === 'MacPPC') $('html').addClass('is-mac');
+
+				JumpTo();
+
+			});
+		</script>
+	</body>
+</html>
